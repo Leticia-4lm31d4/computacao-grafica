@@ -1,7 +1,7 @@
 # Computação Grafica 2023.2
 Repositório para a disciplina de Computação Gráfica 2023.02
 
-### Universidade Federal de São Carlos
+### Universidade Federal de São Carlos - UFSCar
 Bacharelado em Ciência da Computação <br>
 Computação Gráfica <br>
 Prof. Dr. Mario Lizier
