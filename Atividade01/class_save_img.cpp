@@ -45,20 +45,20 @@ public:
 
     /**
      * @brief Salva uma imagem no formato PNG
-     * Abre um arquivo para escrita com o nome especificado.
-     * Cria uma estrutura png
      * @param filename nome do arquivo de imagem a ser salvo
      * @return true // foi salvo com sucesso
      * @return false // houve falha de salvamento
      */
     bool SavePNG(const char* filename) {
 
+        // Abre um arquivo para escrita com o nome passado como argumento.
         FILE* file = fopen(filename, "wb");
         if (!file) {
             std::cerr << "Erro ao abrir o arquivo para escrita: " << filename << std::endl;
             return false;
         }
 
+        // Cria uma estrutura png, que permite a escrita de um arqv, utilizando a função da biblioteca libpng
         png_structp png = png_create_write_struct(PNG_LIBPNG_VER_STRING, nullptr, nullptr, nullptr);
         if (!png) {
             fclose(file);
@@ -67,8 +67,10 @@ public:
         }
 
         /**
-         * @brief 
-         * 
+         * @brief Cria uma estrutura para a informação da estrutura "png" criada, 
+         * essa é passada como argumento para a função da biblioteca libpng.
+         * Caso a estrutura não seja criada, usa-se da função "_destroy_" para destrui-lá.
+         * Para destrir a estrutura passa-se como argumento o endereço da estrutura png.
          */
         png_infop info = png_create_info_struct(png);
         if (!info) {
@@ -78,23 +80,32 @@ public:
             return false;
         }
 
+        /**
+         * @brief Cria um vetor de ponteiros para as linhas da imagem, 
+         * com tamanho dado pela altura da imagem já que cada célula do vetor representa uma linha da imagem.
+         * Então, com o loop, cada ponteiro apontará para uma linha do vetor de pixels.
+         */
         png_bytep row_pointers[height];
         for (int i = 0; i < height; ++i) {
             row_pointers[i] = &pixels[i * width * 3];
         }
 
-        /**
-         * @brief Constrói um novo objeto png_init_io
-         * 
-         */
-        png_init_io(png, file);
+        /*O trecho abaixo é um conjunto de funções que foram fornecidas pela biblioteca para que haja a manipulaçao da estruturas png*/
+
+        // Inicialização do objeto png para que possa-se escrever nele. 
+        png_init_io(png, file); 
+        // Definição das informações "info" da imagem, com seus dados de largura, altura e tipo de cor, rgb nesse caso.
         png_set_IHDR(png, info, width, height, 8, PNG_COLOR_TYPE_RGB, PNG_INTERLACE_NONE, PNG_COMPRESSION_TYPE_DEFAULT, PNG_FILTER_TYPE_DEFAULT);
+        // Escreve as informações da imagem no arquivo png.
         png_write_info(png, info);
+        // Escreve as linhas da imagem (pixels da imagem) no arquivo.
         png_write_image(png, row_pointers);
+        // Utiliza-se essa função para finalizar a escrita no arquivo.
         png_write_end(png, nullptr);
 
         // fecha o arquivo aberto
         fclose(file);
+        // Destroi as estruturas criadas, tanto a do png quanto a de informação paar esse png
         png_destroy_write_struct(&png, &info);
 
         std::cout << "Imagem salva com sucesso: " << filename << std::endl;
@@ -102,9 +113,10 @@ public:
     }
 
 private:
+    // as propriedades abaixo estão privadas pois são detalhes internos, assim estão encapsulados
     int width;
     int height;
-    std::vector<unsigned char> pixels;
+    std::vector<unsigned char> pixels; // definição do vetor de pixels
 };
 
 /**
