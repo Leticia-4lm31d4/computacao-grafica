@@ -11,3 +11,8 @@ Letícia Almeida Paulino de Alencar Ferreira <br> RA: 800480
 ### Ferramentas
 https://www.doxygen.nl/ <br>
 https://raytracing.github.io/
+
+<img 
+    src="./cat-student-photo.jpeg" 
+    height = 240 
+    alt = "gato estudante de computação">
