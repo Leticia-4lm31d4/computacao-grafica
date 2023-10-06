@@ -1,27 +1,27 @@
 /**
  * @file class_save_img.cpp
  * @author Leticia Almeida Paulino de Alencar Ferreira | RA: 800480
- * @brief  Classe própria para salvar imagens num determinado formato
+ * @brief  Classe própria para salvar imagens no formato .png
  * @version 0.1
  * @date 2023-10-05
  * 
  * @copyright Copyright (c) 2023
  * 
- */
+*/
 
 #include <iostream>
 #include <vector>
 #include <png.h>  // Biblioteca libpng
 #include <cmath>
-//#include <Magick++.h> // Biblioteca ImageMagick
+
 
 class ImageSaver {
 public:
     /**
-     * @brief Construct a new Image Saver object
+     * @brief Constrói um novo objeto ImageSaver
      * 
-     * @param width da imagem
-     * @param height da imagem
+     * @param width largura da imagem
+     * @param height altura da imagem
      */
     ImageSaver(int width, int height) : width(width), height(height) {
         // Aloca espaço para a imagem
@@ -45,19 +45,25 @@ public:
     }
 
     /**
-     * @brief Salva a imagem em formato PNG
+     * @brief Salva uma imagem no formato PNG
      * 
-     * @param filename 
-     * @return true 
-     * @return false 
+     * @param filename nome do arquivo de imagem a ser salvo
+     * @return true // foi salvo com sucesso
+     * @return false // houve falha de salvamento
      */
     bool SavePNG(const char* filename) {
+
+        // Abre o arquivo para escrita
         FILE* file = fopen(filename, "wb");
         if (!file) {
             std::cerr << "Erro ao abrir o arquivo para escrita: " << filename << std::endl;
             return false;
         }
 
+        /**
+         * @brief 
+         * 
+         */
         png_structp png = png_create_write_struct(PNG_LIBPNG_VER_STRING, nullptr, nullptr, nullptr);
         if (!png) {
             fclose(file);
@@ -65,6 +71,10 @@ public:
             return false;
         }
 
+        /**
+         * @brief 
+         * 
+         */
         png_infop info = png_create_info_struct(png);
         if (!info) {
             png_destroy_write_struct(&png, nullptr);
@@ -78,12 +88,17 @@ public:
             row_pointers[i] = &pixels[i * width * 3];
         }
 
+        /**
+         * @brief Constrói um novo objeto png_init_io
+         * 
+         */
         png_init_io(png, file);
         png_set_IHDR(png, info, width, height, 8, PNG_COLOR_TYPE_RGB, PNG_INTERLACE_NONE, PNG_COMPRESSION_TYPE_DEFAULT, PNG_FILTER_TYPE_DEFAULT);
         png_write_info(png, info);
         png_write_image(png, row_pointers);
         png_write_end(png, nullptr);
 
+        // fecha o arquivo aberto
         fclose(file);
         png_destroy_write_struct(&png, &info);
 
@@ -98,15 +113,17 @@ private:
 };
 
 /**
- * @brief Função para verificar se um ponto (x, y) está dentro do círculo
+ * @brief Função para verificar se um ponto(x, y) está dentro do círculo
  * 
  * @param x coordenada x do ponto a ser verificado
  * @param y coordenada y do ponto a ser verificado
  * @param centerX coordenada x do centro do circulo
  * @param centerY coordenada y do centro do circulo
  * @param radius raio do circulo
- * @return true // se está dentro do circulo
- * @return false // caso não estiver dentro do circulo
+ *
+ * Cáculo para saber se o ponto está dentro ou fora do cículo
+ * @return true // está dentro do circulo
+ * @return false // não está dentro do circulo
  */
 bool isInsideCircle(int x, int y, int centerX, int centerY, int radius) {
     int dx = x - centerX;
@@ -128,7 +145,7 @@ int main() {
 
 
     /**
-     * @brief Instanciando os objetos que serão as imagem geradas para serem salvas
+     * @brief Instanciando cada objeto que serão as imagem geradas a fim de serem salvas
      * @return ImageSaver 
      */
     ImageSaver degrade_square(image_width, image_height);
@@ -136,8 +153,8 @@ int main() {
     ImageSaver square(image_width, image_height);
 
     /**
-     * @brief Render Degrade.
-     * Gera uma imagem, que consiste em um quadrado colorido em DEGRADE, assim ela será salva no formato png por meio da classe.
+     * @brief Render Degradê.
+     * Gera uma imagem, que consiste em um quadrado colorido em DEGRADE.
      * OBS.: trecho de código retirado da seção 2 do tutorial, com modificação das cores.
      */
     for (int j = 0; j < image_height; ++j) {
@@ -148,14 +165,14 @@ int main() {
             int ir = static_cast<int>(255.999 * r);
             int ig = static_cast<int>(255.999 * g);
             int ib = static_cast<int>(255.999 * b);
-        
+
            degrade_square.SetPixel(i, j, ir, ig, ib);
         }
     }
     std::clog << "\rDone. Degrade           \n";
 
     /**
-     * @brief Salva a imagem e verifica se o processo ocorreu com sucesso ou não.
+     * @brief Salva uma imagem em .png e verifica se o processo ocorreu com sucesso ou não.
      */
     if (degrade_square.SavePNG("degrade.png")) {
         std::cout << "Imagem salva com sucesso!" << std::endl;
@@ -166,7 +183,7 @@ int main() {
 
     /**
      * @brief Render Circulo
-     * Gera uma imagem, que consiste em um circulo colorido, assim ela será salva no formato png por meio da classe.
+     * Gera uma imagem, que consiste em um CÍRCULO azul.
      */
     for (int j = 0; j < image_height; ++j) {
         for (int i = 0; i < image_width; ++i) {
@@ -179,7 +196,8 @@ int main() {
                 int ib = static_cast<int>(255.999 * b);
 
                 circle.SetPixel(i, j, ir, ig, ib);
-            } else {
+            } 
+            else {
                 auto r = 1.0;
                 auto g = 1.0;
                 auto b = 1.0;
@@ -202,14 +220,13 @@ int main() {
 
     /**
      * @brief Render QUADRADO
-     * 
+     * Gera uma imagem, que consiste em um QUADRADO vermelho.
      */
      for (int j = 0; j < image_height; ++j) {
         for (int i = 0; i < image_width; ++i) {
             auto r = 0.9;
             auto g = 0.2;
             auto b = 0.2;
-
             int ir = static_cast<int>(255.999 * r);
             int ig = static_cast<int>(255.999 * g);
             int ib = static_cast<int>(255.999 * b);
@@ -217,7 +234,6 @@ int main() {
             square.SetPixel(i, j, ir, ig, ib);
         }
     }
-
     std::clog << "\rDone. Quadrado              \n";
 
     if (square.SavePNG("quadrado.png")) {
