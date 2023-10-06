@@ -8,6 +8,19 @@ Com isso iniciei o desenvolvimento de uma classe própria para salvar imagens no
 
 Para a documentação houve a construçaõ deste `README`, mas também o uso do `doxygen` no código. Para utilizar o `doxygen` instalei a extensão da ferramenta para o VSCode.
 
+### Imagens
+Degrade
+
+![Imagem Degrade](./degrade.png)
+
+Circulo
+
+![Imagem Criculo](./circulo.png)
+
+Quadrado
+
+![Imagem Quadrado](./quadrado.png)
+
 ### Fontes
 https://raytracing.github.io/books/RayTracingInOneWeekend.html#overview <br>
 https://raytracing.github.io/books/RayTracingInOneWeekend.html?authuser=0#outputanimage <br>
@@ -16,7 +29,7 @@ https://www.doxygen.nl/
 
 ### Roadmap
 1. [x] Seguir o “tutorial” até a seção 2;
-2. [] Criar uma classe própria para salvar imagens, utilize bibliotecas como libpng, CImg e ImageMagick;
+2. [x] Criar uma classe própria para salvar imagens, utilize bibliotecas como libpng, CImg e ImageMagick;
 3. [x] Gere pelo menos três imagens. Exemplos: 
     - [x] degradê, 
     - [x] círculo, 
