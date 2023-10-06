@@ -1,7 +1,7 @@
 /**
  * @file class_save_img.cpp
  * @author Leticia Almeida Paulino de Alencar Ferreira | RA: 800480
- * @brief  Classe própria para salvar imagens
+ * @brief  Classe própria para salvar imagens num determinado formato
  * @version 0.1
  * @date 2023-10-05
  * 
