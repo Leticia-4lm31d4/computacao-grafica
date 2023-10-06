@@ -28,9 +28,9 @@ int main() {
 
         for (int i = 0; i < image_width; ++i) {
             if (isInsideCircle(i, j, centerX, centerY, radius)) {
-                auto r = 0.5;
-                auto g = 0.7;
-                auto b = 1.0;
+                auto r = 1.0;
+                auto g = 0.2;
+                auto b = 0.2;
                 int ir = static_cast<int>(255.999 * r);
                 int ig = static_cast<int>(255.999 * g);
                 int ib = static_cast<int>(255.999 * b);
