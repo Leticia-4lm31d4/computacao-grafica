@@ -2,11 +2,11 @@
 **Objetivo**: Classe própria para salvar imagens.
 
 ### Documentação
-Nessa Primeira atividade, como indicado no roadmap, segui o tutorial até a seção 2, assim, consegui a realizar a saída de uma imagem (quadrado degradê) para o formato `.ppm` por meio do código `main.cpp`. Para vizualizar a imagem, utilizei uma extensão do VScode que permite a vizualização do arquivo `.ppm`.
+Nessa Primeira atividade, a princípio segui o tutorial até a seção 2, assim, consegui a realizar a saída de uma imagem, um quadrado degradê, no formato `img.ppm` por meio do código `main.cpp` que foi compilado gerando o arquivo `img.exe` que ao ser executado foi escrito no arquivo `img.ppm`. Já para vizualizar dessa imagem gerada foi necessária uma extensão do VScode que permite a vizualização de arquivos `.ppm`.
 
-Com isso iniciei o desenvolvimento de uma classe própria para salvar imagens no formato `,png`, utilizando a biblioteca libpng. Nesse sentido, primeiro construi uma classe chamada `class_save_img` com métodos para salvar a imagem .
+Com isso foi possível compreender como criar as imagens de quadrados e circulos, desse modo, fiz um código inicial semelhante a ao `main.cpp` para construir um circulo. Então, iniciei o desenvolvimento do código `class_save_img.cpp` a fim de criar a classe `ImageSaver()` responsável por salvar imagens no formato `.png`, utilizando a biblioteca **libpng**. Dessa maneira, foi preciso a instalação da biblioteca em meu computador. Portanto, com a biblioteca inclusa e classe criada, houve a construção da `main()`, que gera as **imagens de um quadrado degradê, de um circulo azul e de um quadrado vermelho**, e onde os objetos dessa imagens são criados para que possa-se utilizar da classe para salavar essas imagens no formato `png`. Com a compilação do código `class_save_img.cpp` no arquivo executável `classe` as imagens em png são geradas com seus determinados títulos.
 
-Para a documentação houve a construçaõ deste `README`, mas também o uso do `doxygen` no código. Para utilizar o `doxygen` instalei a extensão da ferramenta para o VSCode.
+Dessa forma, para a documentação da atividade o passo a passo está documentado neste `README`, já para a documentação do código `class_save_img.cpp` foi utlizada a ferramenta `doxygen`, por meio de uma extensão da ferramenta para o VSCode, então, o código está documentado nos comentários seguindo a formatação disponibilizada pelo `doxygen`.
 
 ### Imagens
 Degrade
