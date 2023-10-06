@@ -19,23 +19,22 @@ class ImageSaver {
 public:
     /**
      * @brief Constrói um novo objeto ImageSaver
-     * 
+     * Nele o espaço para os pixels da imagem é alocado e cada pixel da imagem é representado por três valores
      * @param width largura da imagem
      * @param height altura da imagem
      */
     ImageSaver(int width, int height) : width(width), height(height) {
-        // Aloca espaço para a imagem
-        pixels.resize(width * height * 3);
+        pixels.resize(width * height * 3); 
     }
     
     /**
-     * @brief Define os valores dos pixels da imagem/objeto
-     * 
-     * @param x 
-     * @param y 
-     * @param r 
-     * @param g 
-     * @param b 
+     * @brief Define o valor/cor de um pixel da imagem/objeto
+     * Os valores são armazenados no vetor pixels nos índices calculados, garantindo que o pixel na posição (x, y) tenha a cor especificada.
+     * @param x coordenada do pixel
+     * @param y coordenada do pixel
+     * @param r valor de de red do pixel
+     * @param g valor de green no pixel
+     * @param b valor de blue no pixel
      */
     void SetPixel(int x, int y, unsigned char r, unsigned char g, unsigned char b) {
         int index = (y * width + x) * 3;
@@ -46,24 +45,20 @@ public:
 
     /**
      * @brief Salva uma imagem no formato PNG
-     * 
+     * Abre um arquivo para escrita com o nome especificado.
+     * Cria uma estrutura png
      * @param filename nome do arquivo de imagem a ser salvo
      * @return true // foi salvo com sucesso
      * @return false // houve falha de salvamento
      */
     bool SavePNG(const char* filename) {
 
-        // Abre o arquivo para escrita
         FILE* file = fopen(filename, "wb");
         if (!file) {
             std::cerr << "Erro ao abrir o arquivo para escrita: " << filename << std::endl;
             return false;
         }
 
-        /**
-         * @brief 
-         * 
-         */
         png_structp png = png_create_write_struct(PNG_LIBPNG_VER_STRING, nullptr, nullptr, nullptr);
         if (!png) {
             fclose(file);
