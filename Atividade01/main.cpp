@@ -1,21 +1,16 @@
+// Output de uma imagem
 #include <iostream>
 
-// Output uma imagem
 int main() {
 
     // Tamanho da imagem
     int image_width = 256;
     int image_height = 256;
 
-    // Render
-
-    /*Progress Indicator*/
-    std::cout << "P3\n" << image_width << ' ' << image_height << "\n255\n"; 
-
+    // Render - Imagem: Quadrado Degrade
+    std::cout << "P3\n" << image_width << ' ' << image_height << "\n255\n"; // Progress Indicator
     for (int j = 0; j < image_height; ++j) {
         std::clog << "\rScanlines remaining: " << (image_height - j) << ' ' << std::flush;
-
-        // Imagem = Degrade
         for (int i = 0; i < image_width; ++i) {
             auto r = double(i) / (image_width-1);
             auto g = 0;
