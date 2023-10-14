@@ -4,9 +4,9 @@
 ### Documentação
 A princípio, segui o **tutorial da seção 3** copiando e depois estudando os códigos `vec3.h`, `color.h` e `main.cpp` que geram a imagem da seção 2 (um quadrado degrade) no formato `.ppm`. 
 
-Com isso, iniciei o desenvolvimento das classes `vec2` e `vec4`
+Com isso, iniciei o desenvolvimento das outras **classes de vetores, `vec2` e `vec4`**,
 
-Já para a criação das classes de matrizes `mat2`, `mat3` e `mat3`
+Já para a criação das **classes de matrizes `mat2`, `mat3` e `mat3`**,
 
 Para os **testes unitários**
 
