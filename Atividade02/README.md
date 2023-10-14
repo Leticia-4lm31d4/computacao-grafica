@@ -2,7 +2,7 @@
 **Objetivo**: Criar uma classe própria para manipular vetores e matrizes.
 
 ### Documentação
-A princípio, segui o **tutorial da seção 3** copiando e depois estudando os códigos `vec3.h`, `color.h` e `main.cpp` que geram a imagem da seção 2 (um quadrado degrade) no formato `.ppm`. 
+A princípio, segui o **tutorial da seção 3** copiando e depois estudando os códigos `vec3.h`, `color.h` e `main.cpp` que geram a imagem da seção 2 (um quadrado degrade) no formato `.ppm`. Nesse sentido, esse conjunto de códigos criam um objeto tridimensional e determinam as cores dos pixels da imagem, salvando-a no formato *ppm*.
 
 Com isso, iniciei o desenvolvimento das outras **classes de vetores, `vec2` e `vec4`**,
 
