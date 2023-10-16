@@ -1,4 +1,4 @@
-TESTES UNITÁRIOS VETORES
+# TESTES UNITÁRIOS VETORES
 
 Vetor (x, y):
 1 3
@@ -8,6 +8,72 @@ Vetor (x, y, z):
 
 Vetor (x, y, z, w):
 4 0 5 1
+
+## Vetores auxiliares:
+1 1
+2 2 2
+2 0 1 0
+
+## SOMA
+
+soma vet2 | ok.
+soma vet3 | ok.
+soma vet4 | ok.
+
+## SUBTRAÇÃO
+
+sub vet2 | ok.
+sub vet3 | ok.
+sub vet4 | ok.
+> Verificando se acusa erro
+sub vet4 | erro.
+
+## PRODUTOS VETORES
+
+prod vet2 | ok.
+prod vet3 | ok.
+prod vet4 | ok.
+
+## ESCALAR VEZES VETOR
+
+esc_vet vet2 | ok.
+esc_vet vet3 | ok.
+esc_vet vet4 | ok.
+
+## VETOR VEZES ESCALAR
+
+vet_esc vet2 | ok.
+vet_esc vet3 | ok.
+vet_esc vet4 | ok.
+
+## DIVISÃO
+
+div vet2 | ok.
+div vet3 | ok.
+div vet4 | ok.
+
+## PRODUTO ESCALAR DE 2 VETORES
+
+prod_esc vet2 | ok.
+prod_esc vet3 | ok.
+prod_esc vet4 | ok.
+
+## PRODUTO VETORIAL
+
+prod_vet vet3 | ok.
+
+## NORMALIZAÇÃO
+
+norma vet2 | Saída: 
+0.316228 0.948683
+norma vet2 | Saída esperada: 
+0.316228 0.948683
+
+norma vet3 | Saída: 
+0.742781 0.371391 0.557086
+norma vet3 | Saída: 
+0.742781 0.371391 0.557086
+
 
 Fim dos testes unitarios!  
 
