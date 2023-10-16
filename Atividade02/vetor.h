@@ -209,76 +209,125 @@ public:
 
 // Funções globais para as classes
 
-// Imprimir um vec2
-inline std::ostream& operator<<(std::ostream &out, const vec2 &v) {
-    return out << v.e[0] << ' ' << v.e[1];
-}
+// Imprimir
 
-// Imprimir um vec3
-inline std::ostream& operator<<(std::ostream &out, const vec3 &v) {
-    return out << v.e[0] << ' ' << v.e[1] << ' ' << v.e[2];
-}
+    inline std::ostream& operator<<(std::ostream &out, const vec2 &v) {
+        return out << v.e[0] << ' ' << v.e[1];
+    }
 
-// Somar dois vec2
-inline vec2 operator+(const vec2 &u, const vec2 &v) {
-    return vec2(u.e[0] + v.e[0], u.e[1] + v.e[1]);
-}
+    inline std::ostream& operator<<(std::ostream &out, const vec3 &v) {
+        return out << v.e[0] << ' ' << v.e[1] << ' ' << v.e[2];
+    }
 
-// Somar dois vec3
-inline vec3 operator+(const vec3 &u, const vec3 &v) {
-    return vec3(u.e[0] + v.e[0], u.e[1] + v.e[1], u.e[2] + v.e[2]);
-}
+    inline std::ostream& operator<<(std::ostream &out, const vec4 &v) {
+        return out << v.e[0] << ' ' << v.e[1] << ' ' << v.e[2] << ' ' << v.e[3];
+    }
 
-// Subtrair dois vec2
-inline vec2 operator-(const vec2 &u, const vec2 &v) {
-    return vec2(u.e[0] - v.e[0], u.e[1] - v.e[1]);
-}
+// Soma de dois vetores iguais (vecN + vecN)
 
-// Subtrair dois vec3
-inline vec3 operator-(const vec3 &u, const vec3 &v) {
-    return vec3(u.e[0] - v.e[0], u.e[1] - v.e[1], u.e[2] - v.e[2]);
-}
+    inline vec2 operator+(const vec2 &u, const vec2 &v) {
+        return vec2(u.e[0] + v.e[0], u.e[1] + v.e[1]);
+    }
 
-// Multiplicar um vec2 por um escalar
-inline vec2 operator*(const vec2 &v, double t) {
-    return vec2(v.e[0] * t, v.e[1] * t);
-}
+    inline vec3 operator+(const vec3 &u, const vec3 &v) {
+        return vec3(u.e[0] + v.e[0], u.e[1] + v.e[1], u.e[2] + v.e[2]);
+    }
 
-// Multiplicar um vec3 por um escalar
-inline vec3 operator*(const vec3 &v, double t) {
-    return vec3(v.e[0] * t, v.e[1] * t, v.e[2] * t);
-}
+    inline vec4 operator+(const vec4 &u, const vec4 &v) {
+        return vec4(u.e[0] + v.e[0], u.e[1] + v.e[1], u.e[2] + v.e[2], u.e[3] + v.e[3]);
+    }
 
-// Multiplicar um escalar por um vec2
-inline vec2 operator*(double t, const vec2 &v) {
-    return v * t;
-}
+// Subtraição de dois vetores iguais (vecN - vecN)
 
-// Multiplicar um escalar por um vec3
-inline vec3 operator*(double t, const vec3 &v) {
-    return v * t;
-}
+    inline vec2 operator-(const vec2 &u, const vec2 &v) {
+        return vec2(u.e[0] - v.e[0], u.e[1] - v.e[1]);
+    }
 
-// Dividir um vec3 por um escalar
-inline vec3 operator/(const vec3 &v, double t) {
-    return (1/t) * v;
-}
+    inline vec3 operator-(const vec3 &u, const vec3 &v) {
+        return vec3(u.e[0] - v.e[0], u.e[1] - v.e[1], u.e[2] - v.e[2]);
+    }
 
-// Calcular o produto escalar de dois vec3
-inline double dot(const vec3 &u, const vec3 &v) {
-    return u.e[0] * v.e[0] + u.e[1] * v.e[1] + u.e[2] * v.e[2];
-}
+    inline vec4 operator-(const vec4 &u, const vec4 &v) {
+        return vec4(u.e[0] - v.e[0], u.e[1] - v.e[1], u.e[2] - v.e[2], u.e[3] - v.e[3]);
+    }
+
+// Multiplicação de um vetor por um escalar
+
+    inline vec2 operator*(const vec2 &v, double t) {
+        return vec2(v.e[0] * t, v.e[1] * t);
+    }
+
+    inline vec3 operator*(const vec3 &v, double t) {
+        return vec3(v.e[0] * t, v.e[1] * t, v.e[2] * t);
+    }
+
+    inline vec4 operator*(const vec4 &v, double t) {
+        return vec4(v.e[0] * t, v.e[1] * t, v.e[2] * t, v.e[3] * t);
+    }
+
+// Multiplicação de um escalar por um vetor
+
+    inline vec2 operator*(double t, const vec2 &v) {
+        return v * t;
+    }
+
+    inline vec3 operator*(double t, const vec3 &v) {
+        return v * t;
+    }
+
+    inline vec4 operator*(double t, const vec4 &v) {
+        return v * t;
+    }
+
+// Dividisão de um vetor por um escalar
+
+    inline vec2 operator/(const vec2 &v, double t) {
+        return (1/t) * v;
+    }
+
+    inline vec3 operator/(const vec3 &v, double t) {
+        return (1/t) * v;
+    }
+
+    inline vec4 operator/(const vec4 &v, double t) {
+        return (1/t) * v;
+    }
+
+// Calcular o produto escalar de dois vetores (vecN, vecN)
+
+    inline double dot(const vec2 &u, const vec2 &v) {
+        return u.e[0] * v.e[0] + u.e[1] * v.e[1];
+    }
+
+    inline double dot(const vec3 &u, const vec3 &v) {
+        return u.e[0] * v.e[0] + u.e[1] * v.e[1] + u.e[2] * v.e[2];
+    }
+
+    inline double dot(const vec4 &u, const vec4 &v) {
+        return u.e[0] * v.e[0] + u.e[1] * v.e[1] + u.e[2] * v.e[2] + u.e[3] * v.e[3];
+    }   
 
 // Calcular o produto vetorial de dois vec3
-inline vec3 cross(const vec3 &u, const vec3 &v) {
-    return vec3(u.e[1] * v.e[2] - u.e[2] * v.e[1],
-                u.e[2] * v.e[0] - u.e[0] * v.e[2],
-                u.e[0] * v.e[1] - u.e[1] * v.e[0]);
-}
+/* O produto vetorial é uma operação específica para vetores tridimensionais, por isso não há para vec2 ou vec4 */
 
-// Normalizar um vec3
-inline vec3 unit_vector(const vec3 &v) {
-    return v / v.length();
-}
+    inline vec3 cross(const vec3 &u, const vec3 &v) {
+        return vec3(u.e[1] * v.e[2] - u.e[2] * v.e[1],
+                    u.e[2] * v.e[0] - u.e[0] * v.e[2],
+                    u.e[0] * v.e[1] - u.e[1] * v.e[0]);
+    }
+
+// Normalização de um vetor
+
+    inline vec2 unit_vector(const vec2 &v) {
+        return v / v.length();
+    }
+
+    inline vec3 unit_vector(const vec3 &v) {
+        return v / v.length();
+    }
+
+    inline vec4 unit_vector(const vec4 &v) {
+        return v / v.length();
+    }
 
 #endif
