@@ -9,7 +9,11 @@
  * 
  */
 
-#include "vetor.h" // classes vec2, vec3 e vec4 
+// classes vec2, vec3 e vec4 
+#include "vec2.h" 
+#include "vec3.h" 
+#include "vec4.h" 
+
 #include <iostream>
 
 int main() {
