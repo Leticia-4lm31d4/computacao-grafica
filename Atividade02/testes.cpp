@@ -27,7 +27,7 @@ int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 
-    std::clog << "\rFim dos testes unitarios das classes         \n";
+     std::cout << "\rFim dos testes unitarios das classes  \n"<< std::endl;
     return 0;
 }
 

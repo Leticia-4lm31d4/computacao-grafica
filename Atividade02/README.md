@@ -12,7 +12,7 @@ Com isso, iniciei o desenvolvimento das **classes de vetores, `vec2` e `vec4`**,
 
 Já para a criação das **classes de matrizes `mat2`, `mat3` e `mat4`**,
 
-Para os **testes unitários** utilizei a biblioteca Google Test e criei o arquivo `testes.cpp`
+Para os **testes unitários** utilizei a biblioteca Google Test e criei o arquivo `testes.cpp`.
 
 **Legenda** <br>
 `vec3` - Vetor tridimensional <br>
