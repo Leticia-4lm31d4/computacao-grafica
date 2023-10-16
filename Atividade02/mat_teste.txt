@@ -1,0 +1,21 @@
+TESTES UNITÁRIOS MATRIZES
+
+Matriz 2x2:
+1 2
+3 4
+
+
+Matriz 3x3:
+1 2 3 
+4 5 6 
+7 8 9 
+
+
+Matriz 4x4:
+1 2 3 4 
+4 5 6 7 
+0 8 9 3 
+2 6 1 5 
+
+Fim dos testes unitarios!  
+

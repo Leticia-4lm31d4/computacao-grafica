@@ -1,0 +1,13 @@
+TESTES UNITÁRIOS VETORES
+
+Vetor (x, y):
+1 3
+
+Vetor (x, y, z):
+2 1 1.5
+
+Vetor (x, y, z, w):
+4 0 5 1
+
+Fim dos testes unitarios!  
+

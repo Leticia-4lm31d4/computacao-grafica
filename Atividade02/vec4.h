@@ -92,7 +92,7 @@ public:
 // 3.Produto de vetores
 
     inline vec4 operator*(const vec4 &u, const vec4 &v) {
-        return vec3(u.e[0] * v.e[0], u.e[1] * v.e[1], u.e[2] * v.e[2], u.e[3] * v.e[3]);
+        return vec4(u.e[0] * v.e[0], u.e[1] * v.e[1], u.e[2] * v.e[2], u.e[3] * v.e[3]);
     }
 
 // 3. Multiplicação de um vetor por um escalar

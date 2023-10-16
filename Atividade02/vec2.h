@@ -1,7 +1,7 @@
 /**
  * @file vector.h
  * @author Letícia Almeida Paulino de Alencar Ferreira - RA 800480
- * @brief Classe para manipulação de vetores bidimensionais (x,y)
+ * @brief Classe para manipulação de vetores com duas componentes (x,y)
  * @version 0.1
  * @date 2023-10-13
  * 
@@ -19,7 +19,7 @@ using std::sqrt;
 
 class vec2 {
   public:
-    double e[2]; // Vetor bidimensional (x, y).
+    double e[2]; // Vetor (x, y).
 
     vec2() : e{0, 0} {}
 
@@ -81,7 +81,7 @@ class vec2 {
 // 3.Produto de vetores
 
     inline vec2 operator*(const vec2 &u, const vec2 &v) {
-        return vec3(u.e[0] * v.e[0], u.e[1] * v.e[1]);
+        return vec2(u.e[0] * v.e[0], u.e[1] * v.e[1]);
     }
 
 // 4.Multiplicação de um vetor por um escalar
