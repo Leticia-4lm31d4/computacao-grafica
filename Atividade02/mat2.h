@@ -47,7 +47,7 @@ public:
     * @return mat2
     */
     mat2 operator-() const {
-        return mat2x2(-e[0][0], -e[0][1], -e[1][0], -e[1][1]);
+        return mat2(-e[0][0], -e[0][1], -e[1][0], -e[1][1]);
     }
 
     /**
@@ -128,7 +128,7 @@ inline mat2 operator*(const mat2 &A, const mat2 &B) {
     return result;
 }
 
-// 4. Multiplicação de uma matriz por um escalar
+// 4. Multiplicação de um escalar por uma matriz
 inline mat2 operator*(double t, const mat2 &A) {
     mat2 result;
     for (int i = 0; i < 2; i++) {
