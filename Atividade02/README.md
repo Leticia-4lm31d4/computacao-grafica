@@ -10,7 +10,7 @@ Dessa maneira, para continuar o desenvolvimento e expandi-lo para manipulação 
 
 Com isso, iniciei o desenvolvimento das **classes de vetores, `vec2` e `vec4`**, utilizando o código do `vec3` como base. Com as classes construídas, as funções globais foi o mesmo processo de semelhança ao vetor tridimensional, entretanto, as classes *vec2* e *vec4* não possuem a função de produto vetorial, pois apenas vetores tridimensionais podem realizar essa operação. Assim, realizei os testes unitários para as classes do vetores, no arquivo `vetores.cpp` imprimindo os resultados no arquivo `vec_teste.txt`.
 
-Para a criação das **classes de matrizes `mat2`, `mat3` e `mat4`**, também utilize o código do *vec3* como base, porém o que mudou foi a adição de linhas na definição do objeto matriz (mat[i][i]). Com as três classes criadas iniciei o desenvolvimento dos métodos.
+Para a criação das **classes de matrizes `mat2`, `mat3` e `mat4`**, também utilize o código do *vec3* como base, porém o que mudou foi a adição de linhas na definição do objeto matriz (mat[i][i]). Com as três classes criadas iniciei o desenvolvimento dos métodos e funções globais. Nesse sentido, iniciei com a *mat2*, fiz seus testes unitários e com isso fiz os métodos e funções globais das classes *mat3* e *mat4*. Portanto, como fiz ara os vetores, os testes unitários estão no arquivo `matrizes.cpp` e as saídas em `mat_teste.txt`.
 
 Para os **testes unitários** não utilizei biblioteca, por isso, para melhor vizualização dos resultados das saídas dos códigos `vetores.cpp` e `matrizes.cpp`, onde estão os testes, foram impressos nos arquivos *txt*: `vet_teste.txt` e `mat_teste.txt`, respectivamente.
 
@@ -31,8 +31,8 @@ https://raytracing.github.io/books/RayTracingInOneWeekend.html#thevec3class <br>
 
 ### Roadmap
 - [x] Seguir o “tutorial” até a seção 3
-- [] Criar uma classe própria para manipular vetores e matrizes, expanda para:
+- [x] Criar uma classe própria para manipular vetores e matrizes, expanda para:
     - [x] vec2, vec4, 
-    - [] mat2, mat3 e mat4
-- [] Faça testes unitários, escolha uma biblioteca que facilite
+    - [x] mat2, mat3 e mat4
+- [x] Faça testes unitários, escolha uma biblioteca que facilite
 - [x] Faça uma breve documentação
