@@ -1,4 +1,5 @@
 TESTES UNITÁRIOS MATRIZES
+> matrizes.cpp
 
 Matriz 2x2: A
 1 2
@@ -32,7 +33,7 @@ Matriz 4x4: B
 1 2 1 2 
 2 1 2 1 
 
-VALORES NEGATIVOS
+VALORES PASSADOS PARA NEGATIVOS
 -1 -2
 -3 -4
  
@@ -45,17 +46,46 @@ VALORES NEGATIVOS
 -1 -8 -9 -3 
 -2 -6 -1 -5 
  
-
-
 SOMA: A + B
+2x2 | ok.
+3x3 | ok.
+4x4 | ok.
 
 
 SUBTRAÇÃO: A - B
+2x2 | ok.
+3x3 | ok.
+4x4 | ok.
 
 
 PRODUTO: A * B
+2x2 | ok.
+3x3 | ok.
+4x4 | ok.
 
 
+PRODUTO: n° * A
+2x2 | ok.
+3x3 | ok.
+4x4 | ok.
+
+
+PRODUTO: A * n°
+2x2 | ok.
+3x3 | ok.
+4x4 | ok.
+
+
+DIVISÃO: A / n°
+2x2 | ok.
+3x3 | ok.
+4x4 | ok.
+
+
+PRODUTO ESCALAR: A X B
+2x2 | ok.
+3x3 | ok.
+4x4 | ok.
 
 Fim dos testes unitarios!  
 

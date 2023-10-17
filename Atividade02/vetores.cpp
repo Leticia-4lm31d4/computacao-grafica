@@ -22,7 +22,8 @@ bool areEqual4(const vec4 &u, const vec4 &v);
 
 int main() {
 
-    std::cout << "# TESTES UNITÁRIOS VETORES\n" << std::endl;
+    std::cout << "# TESTES UNITÁRIOS VETORES" << std::endl;
+    std::cout << "> vetores.cpp\n" << std::endl;
 
     vec2 vet2(1.0, 3.0);
     vec3 vet3(2.0, 1.0, 1.5);
