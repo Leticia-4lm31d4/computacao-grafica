@@ -52,7 +52,7 @@ public:
 
     // Negar os valores
     mat3 operator-() const {
-        return mat2(-e[0][0], -e[0][1], -e[0][2], 
+        return mat3(-e[0][0], -e[0][1], -e[0][2], 
                     -e[1][0], -e[1][1], -e[1][2],
                     -e[2][0], -e[2][1], -e[2][2]);
     }
@@ -136,7 +136,7 @@ inline mat3 operator*(const mat3 &A, const mat3 &B) {
     return result;
 }
 
-// 4. Multiplicação (escalar x matriz)
+// 4. Multiplicação (escalar * matriz)
 inline mat3 operator*(double t, const mat3 &A) {
     mat3 result;
     for (int i = 0; i < 3; i++) {
@@ -147,7 +147,7 @@ inline mat3 operator*(double t, const mat3 &A) {
     return result;
 }
 
-// 5. Multiplicação (matriz x escalar)
+// 5. Multiplicação (matriz * escalar)
 inline mat3 operator*(const mat3 &A, double t) {
     return t * A;
 }
@@ -157,7 +157,7 @@ inline mat3 operator/(const mat3 &A, double t) {
     return (1 / t) * A;
 }
 
-// Produto escalar entre duas matrizes
+// 7. Produto escalar entre duas matrizes
 inline double dot(const mat3 &A, const mat3 &B) {
     double result = 0.0;
     for (int i = 0; i < 3; i++) {
