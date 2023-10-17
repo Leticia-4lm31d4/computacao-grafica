@@ -20,36 +20,69 @@ int main() {
 
     std::cout << "TESTES UNITÁRIOS MATRIZES\n" << std::endl;
 
-    mat2 matrix2(1.0, 2.0, 
-                 3.0, 4.0);
+    mat2 matrix2a(1.0, 2.0, 
+                  3.0, 4.0);
 
-    mat3 matrix3(1.0, 2.0, 3.0, 
-                 4.0, 5.0, 6.0,
-                 7.0, 8.0, 9.0);
+    mat2 matrix2b(3.0, 3.0, 
+                  2.0, 5.0);
 
-    mat4 matrix4(1.0, 2.0, 3.0, 4.0,
-                 4.0, 5.0, 6.0, 7.0,
-                 0.0, 8.0, 9.0, 3.0,
-                 2.0, 6.0, 1.0, 5.0);
+    mat3 matrix3a(1.0, 2.0, 3.0, 
+                  4.0, 5.0, 6.0,
+                  7.0, 8.0, 9.0);
 
-    std::cout << "Matriz 2x2:\n";
-    std::cout << matrix2;
+    mat3 matrix3b(1.0, 6.0, 7.0, 
+                  2.0, 1.0, 8.0,
+                  3.0, 4.0, 1.0);
+
+    mat4 matrix4a(1.0, 2.0, 3.0, 4.0,
+                  4.0, 5.0, 6.0, 7.0,
+                  1.0, 8.0, 9.0, 3.0,
+                  2.0, 6.0, 1.0, 5.0);
+
+    mat4 matrix4b(1.0, 2.0, 1.0, 2.0,
+                  2.0, 1.0, 2.0, 1.0,
+                  1.0, 2.0, 1.0, 2.0,
+                  2.0, 1.0, 2.0, 1.0);
+
+    std::cout << "Matriz 2x2: A\n";
+    std::cout << matrix2a;
+    std::cout << "\nMatriz 2x2: B\n";
+    std::cout << matrix2b;
 
     std::cout << "\n"<< std::endl;
 
-    std::cout << "Matriz 3x3:\n";
-    std::cout << matrix3;
+    std::cout << "Matriz 3x3: A\n";
+    std::cout << matrix3a;
+    std::cout << "\nMatriz 3x3: B\n";
+    std::cout << matrix3b;
 
     std::cout << "\n"<< std::endl;
 
-    std::cout << "Matriz 4x4:\n";
-    std::cout << matrix4;
+    std::cout << "Matriz 4x4: A\n";
+    std::cout << matrix4a;
+    std::cout << "\nMatriz 4x4: B\n";
+    std::cout << matrix4b;
 
-    // Inicio teste M2x2
+    // Negação dos valores
+    std::cout << "\nVALORES NEGATIVOS\n";
 
-    // Inicio teste M3x3
+    std::cout << "\n"<< std::endl;
 
-    // Inicio teste M4x4
+    // Soma de Matrizes
+    std::cout << "SOMA: A + B\n";
+
+    std::cout << "\n"<< std::endl;
+
+    // Subtração de Matrizes
+    std::cout << "SUBTRAÇÃO: A - B\n";
+
+    std::cout << "\n"<< std::endl;
+
+    // Produto de Matrizes
+    std::cout << "PRODUTO: A * B\n";
+
+    std::cout << "\n"<< std::endl;
+
 
     std::cout << "\nFim dos testes unitarios!  \n"<< std::endl;
     return 0;

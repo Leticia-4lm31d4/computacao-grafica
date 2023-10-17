@@ -1,21 +1,49 @@
 TESTES UNITÁRIOS MATRIZES
 
-Matriz 2x2:
+Matriz 2x2: A
 1 2
 3 4
 
+Matriz 2x2: B
+3 3
+2 5
 
-Matriz 3x3:
+
+Matriz 3x3: A
 1 2 3 
 4 5 6 
 7 8 9 
 
+Matriz 3x3: B
+1 6 7 
+2 1 8 
+3 4 1 
 
-Matriz 4x4:
+
+Matriz 4x4: A
 1 2 3 4 
 4 5 6 7 
-0 8 9 3 
+1 8 9 3 
 2 6 1 5 
+
+Matriz 4x4: B
+1 2 1 2 
+2 1 2 1 
+1 2 1 2 
+2 1 2 1 
+
+VALORES NEGATIVOS
+
+
+SOMA: A + B
+
+
+SUBTRAÇÃO: A - B
+
+
+PRODUTO: A * B
+
+
 
 Fim dos testes unitarios!  
 

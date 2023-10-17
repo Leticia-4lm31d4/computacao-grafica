@@ -138,7 +138,7 @@ inline mat4 operator+(const mat4 &A, const mat4 &B) {
 }
 
 // 2. Subtração A - B
-inline mat4 operator+(const mat4 &A, const mat4 &B) {
+inline mat4 operator-(const mat4 &A, const mat4 &B) {
     mat4 result;
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 4; j++) {

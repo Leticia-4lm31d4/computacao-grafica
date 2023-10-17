@@ -104,7 +104,7 @@ public:
     }
 
 // 1. Soma
-inline mat3 operator+(const mat2 &A, const mat2 &B) {
+inline mat3 operator+(const mat3 &A, const mat3 &B) {
     mat3 result;
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
