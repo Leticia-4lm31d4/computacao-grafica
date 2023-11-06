@@ -55,3 +55,21 @@ std::vector<Vertex> readObjFile(const std::string& filename) {
 
   return result;
 }
+
+int main() {
+  std::string filename = "cat.obj"; // Substitua pelo nome do seu arquivo OBJ
+
+  std::vector<Vertex> vertices = readObjFile(filename);
+
+  if (vertices.empty()) {
+    std::cerr << "Não foi possível ler o arquivo OBJ." << std::endl;
+    return 1; // Retornar um código de erro
+  }
+
+  // Agora você pode usar os dados lidos do arquivo OBJ, por exemplo, imprimir os vértices:
+  for (const Vertex& v : vertices) {
+    std::cout << "Vertex: (" << v.x << ", " << v.y << ", " << v.z << ")" << std::endl;
+  }
+
+  return 0; // Retornar 0 indica que o programa terminou com sucesso
+}
