@@ -57,7 +57,7 @@ std::vector<Vertex> readObjFile(const std::string& filename) {
 }
 
 int main() {
-  std::string filename = "cat.obj"; // Substitua pelo nome do seu arquivo OBJ
+  std::string filename = "estrela.obj"; // Substitua pelo nome do seu arquivo OBJ
 
   std::vector<Vertex> vertices = readObjFile(filename);
 

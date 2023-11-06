@@ -3,6 +3,10 @@
 
 ### Documentação
 
+### Objetos dos teste
+![estrela](./gato.png)
+![estrela](./star.png)
+
 ### Fontes
 https://free3d.com/ <br>
 
