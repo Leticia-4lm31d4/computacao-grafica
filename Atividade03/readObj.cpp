@@ -4,72 +4,79 @@
 #include <vector>
 
 /**
- * @brief Vertices do objeto * 
+ * @brief Vertices do objeto
  */
 struct Vertex {
   float x, y, z;
 };
 
-/**
- * @brief Cria um vetor de vértices e um vetor de índices
- * Percorre cada linha do arquivo OBJ 
- * Se a linha começar com “v”, adiciona novo vértice ao vetor de vértices
- * Se a linha começar com “f”, adiciona os índices dos vértices que formam a face ao vetor de índices
- * @param filename 
- * @return novo vetor de vértices
- */
-std::vector<Vertex> readObjFile(const std::string& filename) {
-  std::vector<Vertex> vertices;
-  std::vector<unsigned int> indices;
+class ObjFileReader {
+public:
+  ObjFileReader(const std::string& filename) : filename_(filename) {}
 
-  std::ifstream file(filename);
-  if (!file) {
-     std::cerr << "Failed to open file: " << filename << std::endl;
-     return vertices;
-  }
+  bool readFile() {
+    std::ifstream file(filename_);
+    if (!file) {
+      std::cerr << "Failed to open file: " << filename_ << std::endl;
+      return false;
+    }
 
-  std::string line;
-  while (std::getline(file, line)) {
-     std::istringstream iss(line);
-     std::string type;
-     iss >> type;
+    std::string line;
+    while (std::getline(file, line)) {
+      std::istringstream iss(line);
+      std::string type;
+      iss >> type;
 
-     if (type == "v") {
+      if (type == "v") {
         Vertex v;
         iss >> v.x >> v.y >> v.z;
-        vertices.push_back(v);
-     } else if (type == "f") {
+        vertices_.push_back(v);
+      } else if (type == "f") {
         unsigned int v1, v2, v3;
         iss >> v1 >> v2 >> v3;
-        indices.push_back(v1 - 1);
-        indices.push_back(v2 - 1);
-        indices.push_back(v3 - 1);
-     }
+        indices_.push_back(v1 - 1);
+        indices_.push_back(v2 - 1);
+        indices_.push_back(v3 - 1);
+      }
+    }
 
+    return true;
   }
 
-  std::vector<Vertex> result(vertices.size());
-  for (unsigned int i = 0; i < vertices.size(); ++i) {
-     result[i] = vertices[i];
+  const std::vector<Vertex>& getVertices() const {
+    return vertices_;
   }
 
-  return result;
-}
+  const std::vector<unsigned int>& getIndices() const {
+    return indices_;
+  }
+
+private:
+  std::string filename_;
+  std::vector<Vertex> vertices_;
+  std::vector<unsigned int> indices_;
+};
+
+
 
 int main() {
-  std::string filename = "estrela.obj"; 
+  std::string filename = "estrela.obj";
 
-  std::vector<Vertex> vertices = readObjFile(filename);
+  ObjFileReader objReader(filename);
 
-  if (vertices.empty()) {
+  if (!objReader.readFile()) {
     std::cerr << "Não foi possível ler o arquivo OBJ." << std::endl;
     return 1;
   }
+
+  // Obter os vértices e índices
+  const std::vector<Vertex>& vertices = objReader.getVertices();
+  const std::vector<unsigned int>& indices = objReader.getIndices();
 
   // Imprimir os vértices para verificação
   for (const Vertex& v : vertices) {
     std::cout << "Vertex: (" << v.x << ", " << v.y << ", " << v.z << ")" << std::endl;
   }
 
-  return 0; 
+  return 0;
 }
