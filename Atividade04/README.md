@@ -20,7 +20,7 @@ Para essa etapa bastou seguir os códigos e explicações deles disponíveis no 
 ![Circulo vermelho em fundo azul gradiente](image.png)
 
 ### Visualização da esfera, integrando com as implementações da Atividade 1 e Atividade 2
-Nesse sentido, ocorre a integração das atividades 1, geração de imagens de formas geométricas, e atividade 2, manipulação de vetores e matrizes.
+Nesse sentido, ocorre a integração das atividades 1, geração de imagens de formas geométricas, e atividade 2, manipulação de vetores e matrizes com a classe `vec3.h`.
 
 ### Tutorial 2 seção 6.2
 A seção 6.2 fala sobre "*Ray-Plane Intersection*", que trata sobre a interseção entre um raio e um plano, com o objetivo de implementar essa funcionalidade. Então, fala sobre o processo de calcular a interseção entre um raio e um plano, utilizando a fórmula implícita do plano e o produto escalar. 
