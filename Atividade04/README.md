@@ -8,7 +8,7 @@ Tutorial 2: https://raytracing.github.io/books/RayTracingTheNextWeek.html
 1) - [X] Siga o "tutorial 1" até a seção 5
 2) - [X] Implemente a visualização da esfera, integrando com as implementações anteriores (Atividade 1 e Atividade 2)
 3) - [X] Veja a seção 6.2 do "tutorial 2"
-4) - [] Implemente a visualização de um triângulo
+4) - [X] Implemente a visualização de um triângulo
 5) - [] Com a implementação da Atividade 3, visualize um objeto todo, lido de um arquivo
 6) - [X] Documente adequadamente
 
@@ -30,4 +30,4 @@ Além disso, a função ***hit()*** precisa ser implementada para verificar se u
 ### Implementação da visualização de um triângulo
 Para isso foi necessária escrever a função **hit_triangel()** para verificar se um raio atinge o triangulo. Então, adicionando a chamada da função dentro da função `ray_color`, como está a esfera, ao executar o `tri_exe` a imagem de um triângulo centarlizado na cena é gerada. Como nessa etapa tenho o objetivo de visualizar apenas o triângulo o trecho da esfera foi comentado, pois ela aparece sobre o a imagem do triângulo.
 
-![Triângulo rosa em fundo azul gradiente](image-1.png)
+![Triângulo azul em fundo azul gradiente](image-2.png)

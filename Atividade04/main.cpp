@@ -50,7 +50,7 @@ bool hit_triangle(const point3& v0, const point3& v1, const point3& v2, const ra
 color ray_color(const ray& r) {
     /* Visualização da esfera */ 
     /*if (hit_sphere(point3(0,0,-1), 0.5, r)) {
-        return color(1, 0.5, 0);
+        return color(1, 0, 0);
     }*/
     
     /* Visualização do triangulo */
@@ -61,7 +61,7 @@ color ray_color(const ray& r) {
     point3 v2(0, 0.5, -1);
 
     if (hit_triangle(v0, v1, v2, r)) {
-        return color(0.7, 0.4, 0.5); 
+        return color(0.2, 0, 0.8); 
     }
 
     vec3 unit_direction = unit_vector(r.direction());
