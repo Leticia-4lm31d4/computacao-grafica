@@ -32,5 +32,7 @@ Para isso foi necessária escrever a função **hit_triangel()** para verificar 
 
 ![Triângulo azul em fundo azul gradiente](image-2.png)
 
+### Com a implementação da Atividade 3, visualize um objeto todo, lido de um arquivo
+
 ## Observações e dificuldades
 Nessa atividade não consegui integrar a Atividade 01 corretamente, uma vez que, não consegui implementar a classe que salva imagens no formato `.png` criada na Atividade 01.
