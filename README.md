@@ -1,3 +1,5 @@
+<center>
+
 # Computação Grafica 2023.2
 Repositório para a disciplina de Computação Gráfica 2023.02
 
@@ -16,3 +18,5 @@ https://raytracing.github.io/
     src="./cat-student-photo.jpeg" 
     height = 240 
     alt = "gato estudante de computação">
+    
+</center>
