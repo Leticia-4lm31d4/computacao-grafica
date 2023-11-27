@@ -16,7 +16,16 @@ bool hit_sphere(const point3& center, double radius, const ray& r) {
 
 /* Visualização de um triãgulo */
 
-// Função para verificar se um raio atinge o triângulo
+/**
+ * @brief Função para verificar se um raio atinge o triângulo
+ * 
+ * @param v0 
+ * @param v1 
+ * @param v2 
+ * @param r 
+ * @return true 
+ * @return false 
+ */
 bool hit_triangle(const point3& v0, const point3& v1, const point3& v2, const ray& r) {
     vec3 e1 = v1 - v0;
     vec3 e2 = v2 - v0;

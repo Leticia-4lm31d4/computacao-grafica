@@ -31,3 +31,6 @@ Além disso, a função ***hit()*** precisa ser implementada para verificar se u
 Para isso foi necessária escrever a função **hit_triangel()** para verificar se um raio atinge o triangulo. Então, adicionando a chamada da função dentro da função `ray_color`, como está a esfera, ao executar o `tri_exe` a imagem de um triângulo centarlizado na cena é gerada. Como nessa etapa tenho o objetivo de visualizar apenas o triângulo o trecho da esfera foi comentado, pois ela aparece sobre o a imagem do triângulo.
 
 ![Triângulo azul em fundo azul gradiente](image-2.png)
+
+## Observações e dificuldades
+Nessa atividade não consegui integrar a Atividade 01 corretamente, uma vez que, não consegui implementar a classe que salva imagens no formato `.png` criada na Atividade 01.
