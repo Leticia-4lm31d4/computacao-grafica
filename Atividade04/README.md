@@ -25,6 +25,9 @@ Nesse sentido, ocorre a integração das atividades 1, geração de imagens de f
 ### Tutorial 2 seção 6.2
 A seção 6.2 fala sobre "*Ray-Plane Intersection*", que trata sobre a interseção entre um raio e um plano, com o objetivo de implementar essa funcionalidade. Então, fala sobre o processo de calcular a interseção entre um raio e um plano, utilizando a fórmula implícita do plano e o produto escalar. 
 
-Além disso, a função quad::hit() precisa ser implementada para verificar se um raio interage com o objeto, se sim, precisa determinar as propriedades dessa interseção, como: ponto de impacto, normal, coordenadas de textura. Para isso, é necessário encontrar o plano que contém o objeto, resolver a interseção entre um raio e o plano que contém o objeto e, assim, determinar se o ponto de impacto está dentro do objeto.
+Além disso, a função ***hit()*** precisa ser implementada para verificar se um raio interage com o objeto, se sim, precisa determinar as propriedades dessa interseção, como: ponto de impacto, normal, coordenadas de textura. Para isso, é necessário encontrar o plano que contém o objeto, resolver a interseção entre um raio e o plano que contém o objeto e, assim, determinar se o ponto de impacto está dentro do objeto.
 
 ### Implementação da visualização de um triângulo
+Para isso foi necessária escrever a função **hit_triangel()** para verificar se um raio atinge o triangulo. Então, adicionando a chamada da função dentro da função `ray_color`, como está a esfera, ao executar o `tri_exe` a imagem de um triângulo centarlizado na cena é gerada. Como nessa etapa tenho o objetivo de visualizar apenas o triângulo o trecho da esfera foi comentado, pois ela aparece sobre o a imagem do triângulo.
+
+![Triângulo rosa em fundo azul gradiente](image-1.png)

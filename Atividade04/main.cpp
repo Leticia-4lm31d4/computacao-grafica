@@ -14,14 +14,59 @@ bool hit_sphere(const point3& center, double radius, const ray& r) {
     return (discriminant >= 0);
 }
 
-color ray_color(const ray& r) {
-    if (hit_sphere(point3(0,0,-1), 0.5, r)) {
-        return color(1, 0, 0);
+/* Visualização de um triãgulo */
+
+// Função para verificar se um raio atinge o triângulo
+bool hit_triangle(const point3& v0, const point3& v1, const point3& v2, const ray& r) {
+    vec3 e1 = v1 - v0;
+    vec3 e2 = v2 - v0;
+    vec3 h = cross(r.direction(), e2);
+    double a = dot(e1, h);
+
+    if (a > -0.00001 && a < 0.00001) {
+        return false; // O raio é paralelo ao triângulo.
     }
+
+    double f = 1.0 / a;
+    vec3 s = r.origin() - v0;
+    double u = f * dot(s, h);
+
+    if (u < 0.0 || u > 1.0) {
+        return false;
+    }
+
+    vec3 q = cross(s, e1);
+    double v = f * dot(r.direction(), q);
+
+    if (v < 0.0 || u + v > 1.0) {
+        return false;
+    }
+
+    double t = f * dot(e2, q);
+
+    return t > 0.00001;
+}
+
+color ray_color(const ray& r) {
+    /* Visualização da esfera */ 
+    /*if (hit_sphere(point3(0,0,-1), 0.5, r)) {
+        return color(1, 0.5, 0);
+    }*/
     
+    /* Visualização do triangulo */
+
+    // triângulo está no plano z = -1 e tem vértices em (-1, -0.5, -1), (1, -0.5, -1) e (0, 0.5, -1)
+    point3 v0(-1, -0.5, -1);
+    point3 v1(1, -0.5, -1);
+    point3 v2(0, 0.5, -1);
+
+    if (hit_triangle(v0, v1, v2, r)) {
+        return color(0.7, 0.4, 0.5); 
+    }
+
     vec3 unit_direction = unit_vector(r.direction());
-    auto a = 0.5*(unit_direction.y() + 1.0);
-    return (1.0-a)*color(1.0, 1.0, 1.0) + a*color(0.5, 0.7, 1.0);
+    auto a = 0.5 * (unit_direction.y() + 1.0);
+    return (1.0 - a) * color(1.0, 1.0, 1.0) + a * color(0.5, 0.7, 1.0);
 }
 
 int main() {
