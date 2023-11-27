@@ -20,8 +20,8 @@ Para essa etapa bastou seguir os códigos e explicações deles disponíveis no 
 ![Circulo vermelho em fundo azul gradiente](image.png)
 
 ### Visualização da esfera, integrando com as implementações da Atividade 1 e Atividade 2
-Nesse sentido, para integrar as implementações das Atividades **1**, geração de imagens de formas geométricas e possibilidade de salvar estas imagens, e **2**, manipulação de vetores e matrizes, primeiro transfomei a classe que salva imagens em um arquivo `.h` para utiliza-lo na `main.cpp` da Atividade 4. 
+Nesse sentido, ocorre a integração das atividades 1, geração de imagens de formas geométricas, e atividade 2, manipulação de vetores e matrizes.
 
-Com isso, juntei as classes `vec3`, `vec2` e `vec4` numa só classe chamada `vetores.h` para integrar a `main.cpp` desta atividade e substituir a `vec3.h`
+### Tutorial 2 até a seção 6.2
 
 
