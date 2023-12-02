@@ -37,7 +37,7 @@ Primeiro, para que tivesse disponível um arquivo para visualizar o objeto utili
 
 Objeto fonte :: Piramide
 
-<img src=".\image-1.png" height = 220 alt = "piramide">
+<img src=".\image-3.png" height = 220 alt = "piramide">
 
 
 Já para visualizar o objeto a partir do arquivo, instalei a biblioteca OpenGL para criar uma janela simples e renderizar o objeto: <br>
