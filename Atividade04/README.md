@@ -40,7 +40,8 @@ Objeto fonte :: Piramide
 <img src=".\image-1.png" height = 220 alt = "piramide">
 
 
-Já para visualizar o objeto a partir do arquivo, instalei a biblioteca OpenGL para criar uma janela simples e renderizar o objeto: `sudo apt-get install freeglut3 freeglut3-dev`.
+Já para visualizar o objeto a partir do arquivo, instalei a biblioteca OpenGL para criar uma janela simples e renderizar o objeto: <br>
+`sudo apt-get install freeglut3 freeglut3-dev`.<br>
 
 Objeto visualizado
 
