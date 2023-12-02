@@ -4,6 +4,7 @@
 
 // Visualização de um objeto
 #include "ObjFileReader.h"
+#include <GL/glut.h>
 
 #include <iostream>
 

@@ -9,7 +9,7 @@ Tutorial 2: https://raytracing.github.io/books/RayTracingTheNextWeek.html
 2) - [X] Implemente a visualização da esfera, integrando com as implementações anteriores (Atividade 1 e Atividade 2)
 3) - [X] Veja a seção 6.2 do "tutorial 2"
 4) - [X] Implemente a visualização de um triângulo
-5) - [] Com a implementação da Atividade 3, visualize um objeto todo, lido de um arquivo
+5) - [X] Com a implementação da Atividade 3, visualize um objeto todo, lido de um arquivo
 6) - [X] Documente adequadamente
 
 ## Documentação
@@ -39,9 +39,12 @@ Objeto fonte :: Piramide
 
 <img src=".\image-1.png" height = 220 alt = "piramide">
 
+
+Já para visualizar o objeto a partir do arquivo, instalei a biblioteca OpenGL para criar uma janela simples e renderizar o objeto: `sudo apt-get install freeglut3 freeglut3-dev`.
+
 Objeto visualizado
 
 
 
 ## Observações e dificuldades
-Nessa atividade não consegui integrar a Atividade 01 corretamente, uma vez que, não consegui implementar a classe que salva imagens no formato `.png` criada na Atividade 01.
+Nessa atividade não consegui integrar a Atividade 01 corretamente, uma vez que, não consegui implementar a classe que salva imagens geradas no formato `.png` criada na Atividade 01.
