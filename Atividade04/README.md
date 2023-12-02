@@ -44,6 +44,7 @@ Já para visualizar o objeto a partir do arquivo, utilizeio do aprendizado da di
 do objeto 3D usando *HTML* e *JavaScript*, utilizando a biblioteca `Three.js` para renderização 3D. Portanto o arquivo `obj_view.html` é o responsável por carregar o arquivo txt gerado a fim de obter a visualização do objeto descrito nele.  
 
 Objeto visualizado
+
 <img src=".\image-1.png" height = 220 alt = "piramide lida">
 
 ### Documentação
