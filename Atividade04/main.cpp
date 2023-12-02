@@ -86,7 +86,7 @@ int main() {
     /* Image */ 
 
     // Rendered image setup
-    auto aspect_ratio = 16.0 / 9.0;
+    /*auto aspect_ratio = 16.0 / 9.0;
     int image_width = 400;
 
     // Calculate the image height, and ensure that it's at least 1.
@@ -127,13 +127,18 @@ int main() {
         }
     }
 
-    std::clog << "\rDone.                 \n";
+    std::clog << "\rDone.                 \n";*/
+
+    /*
+        Para que as imagens do circulo e triangulo sejam geradas, 
+        basta comentar o trecho de código abaixo (linha 139 até 169)
+    */
 
     // implementação da Atividade 3, visualize um objeto todo, lido de um arquivo
 
     /*
-        Para que as imagens do circulo e triangulo sejam geradas, 
-        basta comentar o trecho de código abaixo (linha 139 até 158)
+        Leitura de um arquivo obj para gerar um arquivo .txt com os vértices e faces 
+        para que esse objeto seja visualizado a partir desse .txt gerado
     */
 
     std::string filename = "piramide.obj";
@@ -146,13 +151,29 @@ int main() {
     }
 
     // Obter os vértices e índices
-    const std::vector<Vertex>& vertices = objReader.getVertices();
+    /*const std::vector<Vertex>& vertices = objReader.getVertices();
     const std::vector<unsigned int>& indices = objReader.getIndices();
 
     // Imprimir os vértices para verificação
     for (const Vertex& v : vertices) {
         std::cout << "Vertex: (" << v.x << ", " << v.y << ", " << v.z << ")" << std::endl;
+    }*/
+
+    // Imprimir os vértices
+    const std::vector<Vertex>& vertices = objReader.getVertices();
+    for (const Vertex& v : vertices) {
+        std::cout << "v " << v.x << " " << v.y << " " << v.z << std::endl;
+    }
+
+    // Imprimir as faces
+    const std::vector<unsigned int>& indices = objReader.getIndices();
+    for (size_t i = 0; i < indices.size(); i += 3) {
+        std::cout << "f " << indices[i] + 1 << " " << indices[i + 1] + 1 << " " << indices[i + 2] + 1 << std::endl;
     }
 
     std::clog << "\rDone.  Leitura obj.            \n";
+
+    /*
+        Visualização do objeto a partir do arquivo com vertices e faces
+    */
 }
