@@ -35,10 +35,13 @@ Para isso foi necessária escrever a função **hit_triangel()** para verificar 
 ### Com a implementação da Atividade 3, visualize um objeto todo, lido de um arquivo
 Primeiro, para que tivesse disponível um arquivo para visualizar o objeto utilizei a classe ` ObjFileReader.h` da atividade 3 para gerar o arquivo `piramide_leitura.txt` com os vertices e as faces do objeto a ser visualizado.
 
-Objeto fonte :: Piramide de base triangular
-![Objeto fonte que representa uma piramide de base triangular](image-1.png)
+Objeto fonte :: Piramide
+
+<img src=".\image-1.png" height = 220 alt = "piramide">
 
 Objeto visualizado
+
+
 
 ## Observações e dificuldades
 Nessa atividade não consegui integrar a Atividade 01 corretamente, uma vez que, não consegui implementar a classe que salva imagens no formato `.png` criada na Atividade 01.
