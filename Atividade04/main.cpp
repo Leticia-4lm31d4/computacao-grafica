@@ -2,6 +2,9 @@
 #include "ray.h"
 #include "vec3.h"
 
+// Visualização de um objeto
+#include "ObjFileReader.h"
+
 #include <iostream>
 
 // Adicionando a visualização de uma esfera
@@ -125,4 +128,31 @@ int main() {
     }
 
     std::clog << "\rDone.                 \n";
+
+    // implementação da Atividade 3, visualize um objeto todo, lido de um arquivo
+
+    /*
+        Para que as imagens do circulo e triangulo sejam geradas, 
+        basta comentar o trecho de código abaixo (linha 139 até 158)
+    */
+
+    std::string filename = "piramide.obj";
+
+    ObjFileReader objReader(filename);
+
+    if (!objReader.readFile()) {
+        std::cerr << "Não foi possível ler o arquivo OBJ." << std::endl;
+        return 1;
+    }
+
+    // Obter os vértices e índices
+    const std::vector<Vertex>& vertices = objReader.getVertices();
+    const std::vector<unsigned int>& indices = objReader.getIndices();
+
+    // Imprimir os vértices para verificação
+    for (const Vertex& v : vertices) {
+        std::cout << "Vertex: (" << v.x << ", " << v.y << ", " << v.z << ")" << std::endl;
+    }
+
+    std::clog << "\rDone.  Leitura obj.            \n";
 }

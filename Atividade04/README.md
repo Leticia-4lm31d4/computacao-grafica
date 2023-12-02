@@ -34,5 +34,7 @@ Para isso foi necessária escrever a função **hit_triangel()** para verificar 
 
 ### Com a implementação da Atividade 3, visualize um objeto todo, lido de um arquivo
 
+![Objeto que representa uma piramide de base triangular](image-1.png)
+
 ## Observações e dificuldades
 Nessa atividade não consegui integrar a Atividade 01 corretamente, uma vez que, não consegui implementar a classe que salva imagens no formato `.png` criada na Atividade 01.
