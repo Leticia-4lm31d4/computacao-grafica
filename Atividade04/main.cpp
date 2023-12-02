@@ -4,7 +4,6 @@
 
 // Visualização de um objeto
 #include "ObjFileReader.h"
-#include <GL/glut.h>
 
 #include <iostream>
 
@@ -87,7 +86,7 @@ int main() {
     /* Image */ 
 
     // Rendered image setup
-    /*auto aspect_ratio = 16.0 / 9.0;
+    auto aspect_ratio = 16.0 / 9.0;
     int image_width = 400;
 
     // Calculate the image height, and ensure that it's at least 1.
@@ -128,11 +127,11 @@ int main() {
         }
     }
 
-    std::clog << "\rDone.                 \n";*/
+    std::clog << "\rDone.                 \n";
 
     /*
         Para que as imagens do circulo e triangulo sejam geradas, 
-        basta comentar o trecho de código abaixo (linha 139 até 169)
+        basta comentar o trecho de código abaixo (linha 139 até 176)
     */
 
     // implementação da Atividade 3, visualize um objeto todo, lido de um arquivo
@@ -151,15 +150,6 @@ int main() {
         return 1;
     }
 
-    // Obter os vértices e índices
-    /*const std::vector<Vertex>& vertices = objReader.getVertices();
-    const std::vector<unsigned int>& indices = objReader.getIndices();
-
-    // Imprimir os vértices para verificação
-    for (const Vertex& v : vertices) {
-        std::cout << "Vertex: (" << v.x << ", " << v.y << ", " << v.z << ")" << std::endl;
-    }*/
-
     // Imprimir os vértices
     const std::vector<Vertex>& vertices = objReader.getVertices();
     for (const Vertex& v : vertices) {
@@ -173,8 +163,4 @@ int main() {
     }
 
     std::clog << "\rDone.  Leitura obj.            \n";
-
-    /*
-        Visualização do objeto a partir do arquivo com vertices e faces
-    */
 }

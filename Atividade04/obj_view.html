@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objeto 3D</title>
+
+  <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #fileInput {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1;
+        }
+
+        #canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+  </style>
+
+  <script type="module">
+    import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threejs/r127/build/three.module.js';
+
+    function parseOBJ(data) {
+        const geometry = new THREE.BufferGeometry();
+        const vertices = [];
+        const faces = [];
+
+        const lines = data.split('\n');
+        lines.forEach(line => {
+            const parts = line.trim().split(' ');
+
+            if (parts[0] === 'v') {
+            vertices.push(parseFloat(parts[1]), parseFloat(parts[2]), parseFloat(parts[3]));
+            } else if (parts[0] === 'f') {
+            faces.push(parseInt(parts[1]) - 1, parseInt(parts[2]) - 1, parseInt(parts[3]) - 1);
+            }
+        });
+
+        geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+        geometry.setIndex(faces);
+
+        return geometry;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const fileInput = document.createElement('input');
+      fileInput.id = 'fileInput';
+      fileInput.type = 'file';
+      document.body.appendChild(fileInput);
+
+      const canvas = document.createElement('div');
+      canvas.id = 'canvas';
+      document.body.appendChild(canvas);
+
+      fileInput.addEventListener('change', (event) => {
+        const file = event.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            const objData = e.target.result;
+
+            /*const coordenadas = new THREE.AxesHelper(5);
+            scene.add(coordenadas);*/
+
+            // Criação da cena depois da leitura do arquivo
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            canvas.appendChild(renderer.domElement);
+
+            const objGeometry = parseOBJ(objData);
+            const objMaterial = new THREE.MeshBasicMaterial({ color: 0xffff00, wireframe: true });
+            const objMesh = new THREE.Mesh(objGeometry, objMaterial);
+            scene.add(objMesh);
+
+            camera.position.z = 15;
+
+            const animate = () => {
+              requestAnimationFrame(animate);
+
+              objMesh.rotation.x += 0.008;
+              objMesh.rotation.y += 0.009;
+
+              renderer.render(scene, camera);
+            };
+
+            animate();
+          };
+          reader.readAsText(file);
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+</body>
+</html>

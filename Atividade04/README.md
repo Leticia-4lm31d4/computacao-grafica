@@ -40,12 +40,16 @@ Objeto fonte :: Piramide
 <img src=".\image-3.png" height = 220 alt = "piramide">
 
 
-Já para visualizar o objeto a partir do arquivo, instalei a biblioteca OpenGL para criar uma janela simples e renderizar o objeto: <br>
-`sudo apt-get install freeglut3 freeglut3-dev`.<br>
+Já para visualizar o objeto a partir do arquivo, utilizeio do aprendizado da disciplina de ***Processamento Gráfico*** e construi uma visualização 
+do objeto 3D usando *HTML* e *JavaScript*, utilizando a biblioteca `Three.js` para renderização 3D. Portanto o arquivo `obj_view.html` é o responsável por carregar o arquivo txt gerado a fim de obter a visualização do objeto descrito nele.  
 
 Objeto visualizado
+<img src=".\image-1.png" height = 220 alt = "piramide lida">
 
-
+### Documentação
+Para a documentação da atividade houve a descrição do passo a passo de cada etapa neste `README`, já para a documentação dos códigos utilizei o *doxygen* sempre que possível para comentar partes dos códigos, por isso alguns comentários estão em inglês pois a extensão do VSCode já gera a definição de determinadas partes do código, então complementei apenas quando necessário. Para os códigos onde não fiz uso do *doxygen* há comentários padrões para melhor explicações dos trechos.
 
 ## Observações e dificuldades
-Nessa atividade não consegui integrar a Atividade 01 corretamente, uma vez que, não consegui implementar a classe que salva imagens geradas no formato `.png` criada na Atividade 01.
+- Nessa atividade não consegui integrar a Atividade 01 corretamente, uma vez que, não consegui implementar a classe que salva imagens geradas no formato `.png` criada na Atividade 01.
+
+- Optei por realizar a visualização 3D por meio de html e javascript pois não consegui com o c++ e suas bibliotecas, logo escolhi uma opção que já havia experiência.
