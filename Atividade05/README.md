@@ -21,7 +21,9 @@ Com isso, parti para seção 7, para mover o código da câmera para sua própri
 
 ![imagem secção 7 do tutorial](./circle_sec7.png)
 
-Desse modo, segui a seção seguinte, sobre o antialiasing.
+Desse modo, segui a seção seguinte, sobre o antialiasing. Com isso a imagem gerada a partir da seção 8 tem esse efeito e pode ser comparada as imagens geradas nas seções 6 e 7. Ao dar zoom  o efeito é percebido nas bordas do círculo, mas, já ao olhar as imagens sem zoom é notável que elas estão diferentes e que a qualidade de `circle_sec8` parece melhor.
+
+![imagem secção 8 do tutorial](./circle_sec8.png)
 
 ### Implementação do material difuso, com a normal do modelo, utilizando um arquivo com informação de normal
 
