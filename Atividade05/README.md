@@ -17,7 +17,11 @@ Primeiro, segui os códigos da seção 6, mas para compilar tive que adicionar m
 
 ![imagem secção 6 do tutorial](./circle_sec6.png)
 
-Com isso, parti para seção 7.
+Com isso, parti para seção 7, para mover o código da câmera para sua própria classe `camera.h`. Com essa alteração, a única coisa que resta na função main() é a construção do mundo, os outros elementos viram métodos da classe camera. Com a compilação e execução o resultado esperado é o mesmo da seção 6, pois houve apenas uma modificação na estrutura de organização.
+
+![imagem secção 7 do tutorial](./circle_sec7.png)
+
+Desse modo, segui a seção seguinte, sobre o antialiasing.
 
 ### Implementação do material difuso, com a normal do modelo, utilizando um arquivo com informação de normal
 
