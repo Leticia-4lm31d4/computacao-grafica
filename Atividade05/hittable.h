@@ -1,5 +1,3 @@
-// Seguindo o tutorial seção 6
-
 #ifndef HITTABLE_H
 #define HITTABLE_H
 
