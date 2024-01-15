@@ -15,7 +15,7 @@ Tutorial: https://raytracing.github.io/books/RayTracingInOneWeekend.html
 
 Primeiro, segui os códigos da seção 6, mas para compilar tive que adicionar mais um método nas classes hittable_list e sphere, pois meu compilador estava interpretando elas como abstratas por causa da hittable. Assim, adicionei o outro método com override e compilei, nesse sentido com a execução do executável `programa` tive como resultado a imagem `circle_sec6.ppm` como era esperado.
 
-![imagem secção 6 do tutorial](./circle_sec6.ppm)
+![imagem secção 6 do tutorial](./circle_sec6.png)
 
 Com isso, parti para seção 7.
 
