@@ -106,7 +106,7 @@ class camera {
             vec3 direction = rec.normal + random_unit_vector();
             //return 0.5 * ray_color(ray(rec.p, direction), depth-1, world);
 
-            return 0.9 * ray_color(ray(rec.p, direction), depth-1, world);
+            return 0.9 * ray_color(ray(rec.p, direction), depth-1, world); // 0.9 para 90%
         }
 
         vec3 unit_direction = unit_vector(r.direction());

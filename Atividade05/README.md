@@ -43,6 +43,13 @@ Na subseção seguinte usa-se correção gama para intensidade de cor precisa, a
 <br>90%<br>
 ![imagem 2 secção 9.5 do tutorial](./circle_sec9_5_9.png)
 
+Agora write_color(), com correção gamma:
+<br>10%<br>
+![imagem 3 secção 9.5 do tutorial](./circle_sec9_5cg1.png)
+
+<br>90%<br>
+![imagem 4 secção 9.5 do tutorial](./circle_sec9_5cg9.png)
+
 ### Implementação do material difuso, com a normal do modelo, utilizando um arquivo com informação de normal
 
 ### Visualização de uma cena com três objetos e dois pontos de vista diferentes
