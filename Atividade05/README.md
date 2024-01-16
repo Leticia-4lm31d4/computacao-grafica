@@ -7,7 +7,7 @@ Tutorial: https://raytracing.github.io/books/RayTracingInOneWeekend.html
 1) - [X] Siga o tutorial, especialmente as seções 6, 7, 8 e 9.
 2) - [] Implemente o material difuso, usando a normal do modelo (utilize um arquivo com informação de normal)
 3) - [] Visualize uma cena (com pelo menos três objetos) e de dois pontos de vista diferente.
-4) - [] Documente adequadamente
+4) - [X] Documente adequadamente
 
 ## Documentação
 
@@ -24,6 +24,15 @@ Com isso, parti para seção 7, para mover o código da câmera para sua própri
 Desse modo, segui a seção seguinte, sobre o antialiasing. Com isso a imagem gerada a partir da seção 8 tem esse efeito e pode ser comparada as imagens geradas nas seções 6 e 7. Ao dar zoom  o efeito é percebido nas bordas do círculo, mas, já ao olhar as imagens sem zoom é notável que elas estão diferentes e que a qualidade de `circle_sec8` parece melhor.
 
 ![imagem secção 8 do tutorial](./circle_sec8.png)
+
+Portanto, por último segui o passo a passo realizado na seção 9 que aborda **Materiais Difusos**. Isso é o inicio de atingir um tipo de material mais real sobre os objetos. Com os materiais difusos tem-se o efeito de *matte*. Com isso, primeiro gera-se a renderização de uma esfera difusa:
+
+![imagem secção 9.1 do tutorial](./circle_sec9_1.png)
+
+Já a segunda renderização de uma esfera difusa com saltos limitados, a imagem gerada é a mesma. <br>
+Para a terceira imagem gerada teve-se o cálculo das origens dos raios refletidos com tolerância, o que elimina o problema da acne sombria:
+
+![imagem secção 9.3 do tutorial](./circle_sec9_3.png)
 
 ### Implementação do material difuso, com a normal do modelo, utilizando um arquivo com informação de normal
 

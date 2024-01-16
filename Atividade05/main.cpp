@@ -18,6 +18,7 @@ int main() {
 
     // Main is updated to set the new camera parameter.
     cam.samples_per_pixel = 100;
+    cam.max_depth = 50;
 
     cam.render(world);
 }
