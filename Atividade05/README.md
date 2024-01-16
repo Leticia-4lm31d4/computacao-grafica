@@ -34,8 +34,24 @@ Para a terceira imagem gerada teve-se o cálculo das origens dos raios refletido
 
 ![imagem secção 9.3 do tutorial](./circle_sec9_3.png)
 
+Na subseção 9.4 o assunto abordado é a *Verdadeira Reflexão Lambertiana*, foram feitas edições na classe da camera para isso. A imagem gerada é bem similar a gerada anteriormente.
+
+Na subseção seguinte usa-se correção gama para intensidade de cor precisa, a porcentagem pode ser modificada, gerando imagens distintas:
+<br>
+10%
+<br>
+![imagem secção 9.5 do tutorial](./circle_sec9_5.png)
+
+<br>
+90%
+<br>
+![imagem 2 secção 9.5 do tutorial](./circle_sec9_5_9.png)
+
 ### Implementação do material difuso, com a normal do modelo, utilizando um arquivo com informação de normal
 
 ### Visualização de uma cena com três objetos e dois pontos de vista diferentes
 
 ### Documentação do projeto e códigos
+
+A documentação da atividade foi construída ao longo de seu desenvolvimento, pontuando as etapas de cada passo percorrido. <br>
+Para os códigos, comentei em português as partes que achei necessário e utilizei dos textos do próprio tutorial em determinados pontos para explicar melhor o que determinados trechos fazem.
