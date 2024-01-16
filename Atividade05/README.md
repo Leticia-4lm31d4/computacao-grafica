@@ -37,14 +37,10 @@ Para a terceira imagem gerada teve-se o cálculo das origens dos raios refletido
 Na subseção 9.4 o assunto abordado é a *Verdadeira Reflexão Lambertiana*, foram feitas edições na classe da camera para isso. A imagem gerada é bem similar a gerada anteriormente.
 
 Na subseção seguinte usa-se correção gama para intensidade de cor precisa, a porcentagem pode ser modificada, gerando imagens distintas:
-<br>
-10%
-<br>
+<br>10%<br>
 ![imagem secção 9.5 do tutorial](./circle_sec9_5.png)
 
-<br>
-90%
-<br>
+<br>90%<br>
 ![imagem 2 secção 9.5 do tutorial](./circle_sec9_5_9.png)
 
 ### Implementação do material difuso, com a normal do modelo, utilizando um arquivo com informação de normal
