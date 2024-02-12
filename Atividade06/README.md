@@ -28,6 +28,12 @@ Reflexão interna total, percebe-se que a imagem acima não é provida de beleza
 
 ![imagem 4](./refrata_reflete.png)
 
+Aproximação de Schlick. Agora, o vidro real tem refletividade que varia com o ângulo >> espelho. Usando uma aproximação polinomial de Christophe Schlick. Isso produz o material de vidro completo. A cena resultante está no arquivo `esferaXilick`.
+
+![imagem 5](./esferaXilick.png)
+
+Após esses passos a passos termina-se as seção 10, sobre reflexão (metal), e seção 11, sobre refração (vidro). 
+
 ### Implementação de materiais com reflexão e refração
 
 ### Visualização de uma cena com um objeto metálico e outro de vidro
