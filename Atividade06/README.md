@@ -12,7 +12,7 @@ Tutorial: https://raytracing.github.io/books/RayTracingInOneWeekend.html
 ## Documentação
 
 ### Tutorial, seções 10 e 11
-
+Com a seção 10, criei uma classe abstrata `material.h`para materiais que produz um raio espalhado, assim absorve o raio incidente, e se estiver disperso, diz quanto o raio deve ser atenuado. Alpem disso, uma estrutura de dados para descrever interseções raio-objeto.
 
 ### Implementação de materiais com reflexão e refração
 
