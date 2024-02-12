@@ -5,8 +5,8 @@ Tutorial: https://raytracing.github.io/books/RayTracingInOneWeekend.html
 
 ### Roadmap
 1) - [X] Siga o tutorial, especialmente as seções 6, 7, 8 e 9.
-2) - [X] Implemente o material difuso, usando a normal do modelo (utilize um arquivo com informação de normal)
-3) - [X] Visualize uma cena (com pelo menos três objetos) e de dois pontos de vista diferente.
+2) - [] Implemente o material difuso, usando a normal do modelo (utilize um arquivo com informação de normal)
+3) - [] Visualize uma cena (com pelo menos três objetos) e de dois pontos de vista diferente.
 4) - [X] Documente adequadamente
 
 ## Documentação
@@ -50,8 +50,9 @@ Agora write_color(), com correção gamma:
 <br>90%<br>
 ![imagem 4 secção 9.5 do tutorial](./circle_sec9_5cg9.png)
 
-### Implementação do material difuso, com a normal do modelo, utilizando um arquivo com informação de normal Visualização de uma cena com três objetos e dois pontos de vista diferentes
-Etapas implementadas no decorrer do tutorial, como está apresentado nas imagens.
+### Implementação do material difuso, com a normal do modelo, utilizando um arquivo com informação de normal
+
+### Visualização de uma cena com três objetos e dois pontos de vista diferentes
 
 ### Documentação do projeto e códigos
 
