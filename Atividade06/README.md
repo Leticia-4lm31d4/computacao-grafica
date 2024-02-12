@@ -12,7 +12,9 @@ Tutorial: https://raytracing.github.io/books/RayTracingInOneWeekend.html
 ## Documentação
 
 ### Tutorial, seções 10 e 11
-Com a seção 10, criei uma classe abstrata `material.h`para materiais que produz um raio espalhado, assim absorve o raio incidente, e se estiver disperso, diz quanto o raio deve ser atenuado. Alpem disso, uma estrutura de dados para descrever interseções raio-objeto.
+Com a seção 10, criei uma classe abstrata `material.h`para materiais que produz um raio espalhado, assim absorve o raio incidente, e se estiver disperso, diz quanto o raio deve ser atenuado. Alpem disso, uma estrutura de dados para descrever interseções raio-objeto. Portanto, seguindo os passos iniciais da seção executei o arquivo `programa` para gerar a cena com 3 esferas, sendo duas brilhantes e outra não. Cena armazenada no arquivo `esfera_brilha`.
+
+![imagem 1](./esfera_brilha.png)
 
 ### Implementação de materiais com reflexão e refração
 

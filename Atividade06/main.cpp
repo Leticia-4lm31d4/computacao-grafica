@@ -7,7 +7,6 @@
 #include "sphere.h"
 
 int main() {
-    // A única coisa que resta na função main() é a construção do mundo
     hittable_list world;
 
     // Esferas metálicas em cena
