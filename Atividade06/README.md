@@ -5,8 +5,8 @@ Tutorial: https://raytracing.github.io/books/RayTracingInOneWeekend.html
 
 ### Roadmap
 1) - [X] Siga o tutorial, especialmente as seções 10 e 11.
-2) - [] Implemente o materiais com reflexão e refração.
-3) - [] Visualize uma cena com um objeto metálico e outro de vidro.
+2) - [X] Implemente o materiais com reflexão e refração.
+3) - [X] Visualize uma cena com um objeto metálico e outro de vidro.
 4) - [X] Documente adequadamente
 
 ## Documentação
@@ -34,9 +34,8 @@ Aproximação de Schlick. Agora, o vidro real tem refletividade que varia com o 
 
 Após esses passos a passos termina-se as seção 10, sobre reflexão (metal), e seção 11, sobre refração (vidro). 
 
-### Implementação de materiais com reflexão e refração
-
-### Visualização de uma cena com um objeto metálico e outro de vidro
+### Implementação de materiais com reflexão e refração e Visualização de uma cena com um objeto metálico e outro de vidro
+Essas etapas ocorrem no decorrer do tutorial seguido, apresentada nas imagem resultantes. Assim a última imagem gerada.
 
 ### Documentação do projeto e códigos
 
